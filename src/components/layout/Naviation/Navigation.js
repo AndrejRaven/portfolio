@@ -34,8 +34,7 @@ const Navigation = () =>  {
             </Typography>
             <Button color="inherit">Skills</Button>
             <Button color="inherit">Projects</Button>
-            <Button color="inherit">Education</Button>
-            <Button color="inherit">Work Expiriance</Button>
+            <Button color="inherit">Education / Work Expiriance</Button>
           </Toolbar>
         </AppBar>
       </div>
