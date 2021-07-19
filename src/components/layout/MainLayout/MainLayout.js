@@ -1,21 +1,19 @@
 import { Container, Badge, Paper, makeStyles, withStyles,  
-  Grid, Avatar, Typography, Button, AppBar, Toolbar } from '@material-ui/core';
+  Grid, Avatar, Typography, Button } from '@material-ui/core';
 import React from 'react';
-import { FaReact, FaHtml5, FaCss3Alt, FaSass } from 'react-icons/fa';
-import { SiRedux, SiJavascript, SiGithub, SiBootstrap, SiMaterialUi } from 'react-icons/si';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import EmailIcon from '@material-ui/icons/Email';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import Projects from '../../views/Projects/Projects';
-
+import Footer from '../../views/Footer/Footer';
+import Skills from '../../views/Skills/Skills';
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-      
   },
   paper: {
     padding: theme.spacing(9),
@@ -142,7 +140,7 @@ const MainLayout = () => {
                 <div className={classes.mainFeaturesPostImage}>
                   <div className={classes.root}>
                     <Badge
-                      overlap="circle"
+                      overlap="circular"
                       anchorOrigin={{
                         vertical: 'bottom',
                         horizontal: 'right',
@@ -158,112 +156,7 @@ const MainLayout = () => {
           </Container>
         </Paper>  
       </main>
-      <Container maxWidth='lg'
-
-        className={classes.marginTop}
-      >
-        <Paper elevation={3}
-          className={classes.paper}  >
-          <Grid container
-            spacing={2}
-            justifyContent="center"
-          >
-            <Grid item xs={12}>
-              <Typography 
-                component="h1"
-                variant="h3"
-                color="inherit"
-                gutterBottom
-              >My technology stack</Typography>  
-              <Button className={classes.margin}>
-                    Programming
-              </Button>
-              <Button className={classes.margin}>
-                    Tools
-              </Button>
-              <Button className={classes.margin}>
-                    Soft skills
-              </Button>
-              <Button className={classes.margin}>
-                    Languages
-              </Button>
-              <Grid container
-                spacing={2}
-                justifyContent="center">
-                <Grid item xs={3} className={classes.icon}><FaReact size={70} /></Grid>  
-                <Grid item xs={3} className={classes.icon}><FaHtml5 size={70} /></Grid> 
-                <Grid item xs={3} className={classes.icon}><FaCss3Alt size={70} /></Grid> 
-                <Grid item xs={3} className={classes.icon}><SiRedux size={70} /></Grid> 
-                <Grid item xs={3} className={classes.icon}><SiJavascript size={70} /></Grid> 
-                <Grid item xs={3} className={classes.icon}><SiGithub size={70} /></Grid> 
-                <Grid item xs={3} className={classes.icon}><SiBootstrap size={70} /></Grid> 
-                <Grid item xs={3} className={classes.icon}><FaSass size={70} /></Grid>  
-                <Grid item xs={3} className={classes.icon}><SiMaterialUi size={70} /></Grid>        
-              </Grid>  
-            </Grid>  
-          </Grid>
-          <Grid container
-            spacing={2}
-            justifyContent="center"
-          >
-            <Grid item xs={12}>
-              <Typography 
-                component="h1"
-                variant="h3"
-                color="inherit"
-                gutterBottom
-              >My technology stack</Typography>  
-              <Grid container
-                spacing={2}
-                justifyContent="center">
-                <Grid item xs={3} className={classes.icon}><FaReact size={70} /></Grid>  
-                <Grid item xs={3} className={classes.icon}><FaHtml5 size={70} /></Grid> 
-                <Grid item xs={3} className={classes.icon}><FaCss3Alt size={70} /></Grid>      
-              </Grid>  
-            </Grid>  
-          </Grid>
-          <Grid container
-            spacing={2}
-            justifyContent="center"
-          >
-            <Grid item xs={12}>
-              <Typography 
-                component="h1"
-                variant="h3"
-                color="inherit"
-                gutterBottom
-              >My technology stack</Typography>  
-              <Grid container
-                spacing={2}
-                justifyContent="center">
-                <Grid item xs={3} className={classes.icon}><FaReact size={70} /></Grid>  
-                <Grid item xs={3} className={classes.icon}><FaHtml5 size={70} /></Grid> 
-                <Grid item xs={3} className={classes.icon}><FaCss3Alt size={70} /></Grid>      
-              </Grid>  
-            </Grid>  
-          </Grid>
-          <Grid container
-            spacing={2}
-            justifyContent="center"
-          >
-            <Grid item xs={12}>
-              <Typography 
-                component="h1"
-                variant="h3"
-                color="inherit"
-                gutterBottom
-              >My technology stack</Typography>  
-              <Grid container
-                spacing={2}
-                justifyContent="center">
-                <Grid item xs={3} className={classes.icon}><FaReact size={70} /></Grid>  
-                <Grid item xs={3} className={classes.icon}><FaHtml5 size={70} /></Grid> 
-                <Grid item xs={3} className={classes.icon}><FaCss3Alt size={70} /></Grid>      
-              </Grid>  
-            </Grid>  
-          </Grid>
-        </Paper>
-      </Container>
+      <Skills />                
       <Projects />
       <section className={classes.marginTop}>
         <Paper className={classes.mainFeaturesPost}
@@ -318,7 +211,7 @@ const MainLayout = () => {
                 <div className={classes.mainFeaturesPostImage}>
                   <div className={classes.root}>
                     <Badge
-                      overlap="circle"
+                      overlap="circular"
                       anchorOrigin={{
                         vertical: 'bottom',
                         horizontal: 'right',
@@ -334,15 +227,7 @@ const MainLayout = () => {
           </Container>
         </Paper>  
       </section>
-      <AppBar position="static" color="primary" className={classes.marginTop}>
-        <Container maxWidth="md">
-          <Toolbar className={classes.footer}>
-            <Typography variant="body1" color="inherit">
-                © 2021 Andrej Babiak
-            </Typography>
-          </Toolbar>
-        </Container>
-      </AppBar>
+      <Footer />
     </>
   );
 };

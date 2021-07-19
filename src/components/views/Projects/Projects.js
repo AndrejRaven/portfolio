@@ -100,7 +100,7 @@ const Projects = () => {
 
   return (
       
-    <Container maxWidth='lg'>
+    <Container maxWidth='lg' className={classes.marginTop}>
       <Grid container align='center'>
         <Grid item xs={12}>
           <Typography
