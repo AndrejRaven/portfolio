@@ -54,18 +54,10 @@ const Skills = () => {
               color="inherit"
               gutterBottom
             >My technology stack</Typography>  
-            <Button className={classes.margin}>
-              <Link to={`${process.env.PUBLIC_URL}/programming`}>Programming</Link>
-            </Button>
-            <Button className={classes.margin}>
-              <Link to={`${process.env.PUBLIC_URL}/tools`}>Tools</Link>
-            </Button>
-            <Button className={classes.margin}>
-              <Link to={`${process.env.PUBLIC_URL}/softSkills`}>Soft Skills</Link>
-            </Button>
-            <Button className={classes.margin}>
-              <Link to={`${process.env.PUBLIC_URL}/languages`}>Languages</Link>
-            </Button> 
+            <Link to={`${process.env.PUBLIC_URL}/programming`}><Button className={classes.margin}>Programming</Button></Link>
+            <Link to={`${process.env.PUBLIC_URL}/tools`}><Button className={classes.margin}>Tools</Button></Link>
+            <Link to={`${process.env.PUBLIC_URL}/softSkills`}><Button className={classes.margin}>Soft skills</Button></Link>
+            <Link to={`${process.env.PUBLIC_URL}/languages`}><Button className={classes.margin}>Languages</Button></Link>
           </Grid>
           <div className={classes.content}>
             <Switch>
