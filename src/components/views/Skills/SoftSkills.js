@@ -1,7 +1,9 @@
-import {  Grid, makeStyles} from '@material-ui/core';
+import {  Grid, makeStyles, Typography} from '@material-ui/core';
 import React from 'react';
-import { FaReact, FaHtml5, FaCss3Alt, FaSass } from 'react-icons/fa';
-import { SiRedux, SiJavascript, SiGithub, SiBootstrap, SiMaterialUi } from 'react-icons/si';
+import { FaBrain, FaRegSmileBeam, FaMagic } from 'react-icons/fa';
+import { TiMessages} from 'react-icons/ti';
+import { GiAk47, GiRollingEnergy, GiChainLightning, GiYinYang, GiTrophy } from 'react-icons/gi';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   icon: {
-    background: theme.palette.grey[400], 
+   
   },
 }));
 
@@ -30,15 +32,24 @@ const SoftSkills = () => {
     <Grid container
       spacing={2}
       justifyContent="center">
-      <Grid item xs={3} className={classes.icon}><FaReact size={70} /></Grid>  
-      <Grid item xs={3} className={classes.icon}><FaHtml5 size={70} /></Grid> 
-      <Grid item xs={3} className={classes.icon}><FaCss3Alt size={70} /></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiRedux size={70} /></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiJavascript size={70} /></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiGithub size={70} /></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiBootstrap size={70} /></Grid> 
-      <Grid item xs={3} className={classes.icon}><FaSass size={70} /></Grid>  
-      <Grid item xs={3} className={classes.icon}><SiMaterialUi size={70} /></Grid>        
+      <Grid item xs={3} className={classes.icon}><TiMessages size={70} />
+        <Typography>Comunicated</Typography></Grid>  
+      <Grid item xs={3} className={classes.icon}><GiTrophy size={70} />
+        <Typography>Results-oriented</Typography></Grid> 
+      <Grid item xs={3} className={classes.icon}><GiChainLightning size={70} />
+        <Typography>Team player</Typography></Grid> 
+      <Grid item xs={3} className={classes.icon}><FaBrain size={70} />
+        <Typography>Trainable</Typography></Grid> 
+      <Grid item xs={3} className={classes.icon}><GiAk47 size={70} />
+        <Typography>Troubleshoting</Typography></Grid> 
+      <Grid item xs={3} className={classes.icon}><FaRegSmileBeam size={70} />
+        <Typography>Motivated</Typography></Grid> 
+      <Grid item xs={3} className={classes.icon}><FaMagic size={70} />
+        <Typography>Creative</Typography></Grid> 
+      <Grid item xs={3} className={classes.icon}><GiRollingEnergy size={70} />
+        <Typography>Energy</Typography></Grid>  
+      <Grid item xs={3} className={classes.icon}><GiYinYang size={70} />
+        <Typography>Work-life balance</Typography></Grid>        
     </Grid>
   );
 
