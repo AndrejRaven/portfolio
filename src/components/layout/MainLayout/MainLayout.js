@@ -1,5 +1,5 @@
 import { Container, Badge, Paper, makeStyles, withStyles,  
-  Grid, Avatar, Typography, Button } from '@material-ui/core';
+  Grid, Avatar, Typography, Button, List, ListItem, ListItemAvatar, ListItemText } from '@material-ui/core';
 import React from 'react';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -27,7 +27,23 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    minHeight: '50vh',
+    minHeight: '70vh',
+  },
+  curve: {
+    position: 'absolute',
+    height: '100px',
+    width: '100%',
+    bottom: '-70px',
+    textAlign: 'center',
+    '&:before': {
+      content: '""',
+      display: 'block',
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      transform: 'skewY(-2deg)',
+      backgroundColor: 'white',
+    },
   },
   mainFeaturesPostContent: {
     position: 'relative',
@@ -82,6 +98,10 @@ const useStyles = makeStyles((theme) => ({
   avatar: {
     backgroundColor: theme.palette.error,
   },
+  mainPhoto: {
+    display: 'flex',
+    flexDirection: 'row-reverse',
+  },
   footer: {
     justifyContent: 'center', 
   },
@@ -104,12 +124,12 @@ const MainLayout = () => {
     <>
       <main>
         <Paper className={classes.mainFeaturesPost}
-          style={{ backgroundImage: `url(https://source.unsplash.com/random)`}}>
+          style={{ backgroundImage: `url(https://i.postimg.cc/RFPBb8jm/pexels-suzy-hazelwood-1629236.jpg)`}}>
           <Container fixed>
             <div className={classes.overlay} />  
             <Grid container
               direction="row"
-              justifyContent="center"
+              justifyContent="space-between"
               alignItems="center"
             >
               <Grid item sm={6}>
@@ -138,7 +158,7 @@ const MainLayout = () => {
               </Grid>
               <Grid item sm={6}>
                 <div className={classes.mainFeaturesPostImage}>
-                  <div className={classes.root}>
+                  <div className={classes.mainPhoto}>
                     <Badge
                       overlap="circular"
                       anchorOrigin={{
@@ -154,10 +174,172 @@ const MainLayout = () => {
               </Grid>
             </Grid>
           </Container>
-        </Paper>  
+          <div className={classes.curve}></div>
+        </Paper>               
       </main>
       <Skills />                
       <Projects />
+      <section className={classes.marginTop}>
+        <Paper className={classes.mainFeaturesPost}>
+          <Container fixed>
+            <div className={classes.overlay} />  
+            <Grid container
+              direction="row"
+              justifyContent="center"
+            >
+              <Grid item sm={6}>
+                <div className={classes.mainFeaturesPostContent}>
+                  <Typography
+                    component="h1"
+                    variant="h3"
+                    color="inherit"
+                    gutterBottom
+                  >
+                            Education 
+                  </Typography>
+                  <Typography
+                    component="h3"
+                    variant="h5"
+                    color="inherit"
+                    gutterBottom
+                  >
+                            Standart education 
+                  </Typography>
+                  <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Chmielnitsky College of Trade and Economy
+                        " secondary="Sep 1, 2007 - May 31, 2010" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Kiev University of Trade and Economy" secondary="Sep 1, 2010 - May 31, 2014" />
+                    </ListItem>
+                  </List>
+                  <Typography
+                    component="h3"
+                    variant="h5"
+                    color="inherit"
+                    gutterBottom
+                  >
+                            Side education 
+                  </Typography>
+                  <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Codeacademy.com" secondary=" 2018 - 2019" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Udemy course Selenium Java" secondary="2019 - 2020" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Udemy course Frontend Developer" secondary="2020 - 2021" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Kodilla.com.pl Frontend Developer" secondary="2020 - 2021" />
+                    </ListItem>
+                  </List>
+                </div> 
+              </Grid>
+              <Grid item sm={6}>
+                <div className={classes.mainFeaturesPostContent}>
+                  <Typography
+                    component="h1"
+                    variant="h3"
+                    color="inherit"
+                    gutterBottom
+                  >
+                            Work expiriance 
+                  </Typography>
+                  <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Agro-import | Kiev, Ukraine
+                        " secondary="2012 - 2013 | Merchandiser" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Leader-group | Chmielnitski , Ukraina
+                        " secondary="2013 - 2016 | Sales Representative" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Leader-group | Chmielnitski, Ukraina
+                        " secondary="2016 - 2018 | Management and accounting" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="DB Schenker | Goleniow, Poland
+                        " secondary="2018 - 2019 | Warehouse worker" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="Meblomak | Rumia, Poland
+                        " secondary="2019 - 2019 | Warehouse worker" />
+                    </ListItem>
+                    <ListItem>
+                      <ListItemAvatar>
+                        <Avatar>
+                          <FacebookIcon />
+                        </Avatar>
+                      </ListItemAvatar>
+                      <ListItemText primary="DHL | Gdansk, Poland
+                        " secondary="2019 - 2021 | Courier" />
+                    </ListItem>
+                  </List>
+                </div> 
+              </Grid>
+            </Grid>  
+          </Container>
+        </Paper>  
+      </section>
       <section className={classes.marginTop}>
         <Paper className={classes.mainFeaturesPost}
           style={{ backgroundImage: `url(https://source.unsplash.com/random)`}}>
@@ -209,7 +391,7 @@ const MainLayout = () => {
               </Grid>
               <Grid item sm={6}>
                 <div className={classes.mainFeaturesPostImage}>
-                  <div className={classes.root}>
+                  <div className={classes.mainPhoto}>
                     <Badge
                       overlap="circular"
                       anchorOrigin={{
