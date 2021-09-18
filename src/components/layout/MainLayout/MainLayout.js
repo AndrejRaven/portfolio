@@ -40,9 +40,9 @@ const useStyles = makeStyles((theme) => ({
       display: 'block',
       position: 'absolute',
       width: '100%',
-      height: '100%',
+      height: '72%',
       transform: 'skewY(-2deg)',
-      backgroundColor: 'white',
+      backgroundColor: '#fafafa',
     },
   },
   mainFeaturesPostContent: {
