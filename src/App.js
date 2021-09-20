@@ -2,18 +2,75 @@ import React from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout/MainLayout';
 // import Dashboard from './components/views/Dashboard/Dashboard.js';
-import { Provider } from 'react-redux';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import Navigation from './components/layout/Naviation/Navigation';
-import store from './redux/store';
 import Programming from './components/views/Skills/Programming';
 import SoftSkills from './components/views/Skills/SoftSkills';
 import Tools from './components/views/Skills/Tools';
 import Languages from './components/views/Skills/Languages';
 
+const theme = createTheme({
+  palette: {
+    type: 'light',
+    primary: {
+      main: '#261826',
+    },
+    secondary: {
+      main: '#8FA6A1',
+    },
+  },
+  typography: {
+    fontFamily: 'Droid Sans',
+    h1: {
+      fontFamily: 'Lato',
+    },
+  },
+  props: {
+    MuiButton: {
+      size: 'small',
+    },
+    MuiButtonGroup: {
+      size: 'small',
+    },
+    MuiCheckbox: {
+      size: 'small',
+    },
+    MuiFab: {
+      size: 'small',
+    },
+    MuiFormControl: {
+      margin: 'dense',
+      size: 'small',
+    },
+    MuiFormHelperText: {
+      margin: 'dense',
+    },
+    MuiIconButton: {
+      size: 'small',
+    },
+    MuiInputBase: {
+      margin: 'dense',
+    },
+    MuiInputLabel: {
+      margin: 'dense',
+    },
+    MuiRadio: {
+      size: 'small',
+    },
+    MuiSwitch: {
+      size: 'small',
+    },
+    MuiTextField: {
+      margin: 'dense',
+      size: 'small',
+    },
+  },
+});
+
 function App() {
   return (
-    <Provider store={store}>
-      <BrowserRouter basename={'/'}>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter basename={'/programming'}>
         <Navigation />
         <MainLayout>
           <Switch>
@@ -24,7 +81,7 @@ function App() {
           </Switch>
         </MainLayout>
       </BrowserRouter>
-    </Provider>
+    </ThemeProvider>
   );
 }
 

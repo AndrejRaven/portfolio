@@ -10,15 +10,14 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "country-flag-icons": "^1.4.0",
+    "material-ui": "^1.0.0-beta.47",
     "node-sass": "4.14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-flagkit": "^2.0.4",
     "react-icons": "^4.2.0",
-    "react-redux": "7.0.1",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
-    "redux": "4.0.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -105,7 +104,6 @@
   },
   "devDependencies": {
     "husky": "^7.0.1",
-    "lint-staged": "^11.0.0",
-    "redux-devtools-extension": "2.13.8"
+    "lint-staged": "^11.0.0"
   }
 }
