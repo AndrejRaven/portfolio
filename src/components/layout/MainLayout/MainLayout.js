@@ -168,7 +168,7 @@ const MainLayout = () => {
                         vertical: 'bottom',
                         horizontal: 'right',
                       }}
-                      badgeContent={<SmallAvatar alt="React" src={iconReact} />}
+                      badgeContent={<SmallAvatar style={{ border: 'none' }} alt="React" src={iconReact} />}
                     >
                       <Avatar alt="Andrej Babiak" src={avatar} className={classes.large} />
                     </Badge>
