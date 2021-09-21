@@ -1,10 +1,9 @@
 import { Container, makeStyles,  
-  Grid, Avatar, Typography, Card, CardMedia, CardContent,
+  Grid, Typography, Card, CardMedia, CardContent,
   CardActions, IconButton, CardHeader, Collapse} from '@material-ui/core';
 import React from 'react';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { cards } from '../../../data/cardProjectData.json';
 import clsx from 'clsx';
 
@@ -116,16 +115,6 @@ const Projects = () => {
           <Grid item xs={4} className={classes.marginTopCard} key={card.id}>
             <Card className={classes.cardRoot}>
               <CardHeader
-                avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                    {card.avatar}
-                  </Avatar>
-                }
-                action={
-                  <IconButton aria-label="settings">
-                    <MoreVertIcon />
-                  </IconButton>
-                }
                 title={card.title}
                 subheader={card.subhead}
               />

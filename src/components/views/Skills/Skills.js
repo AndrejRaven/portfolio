@@ -54,14 +54,14 @@ const Skills = () => {
               color="inherit"
               gutterBottom
             >My technology stack</Typography>  
-            <Link to={`${process.env.PUBLIC_URL}/programming`}><Button className={classes.margin}>Programming</Button></Link>
-            <Link to={`${process.env.PUBLIC_URL}/tools`}><Button className={classes.margin}>Tools</Button></Link>
-            <Link to={`${process.env.PUBLIC_URL}/softSkills`}><Button className={classes.margin}>Soft skills</Button></Link>
-            <Link to={`${process.env.PUBLIC_URL}/languages`}><Button className={classes.margin}>Languages</Button></Link>
+            <Link to={`/`}><Button className={classes.margin}>Programming</Button></Link>
+            <Link to={`/tools`}><Button className={classes.margin}>Tools</Button></Link>
+            <Link to={`/softSkills`}><Button className={classes.margin}>Soft skills</Button></Link>
+            <Link to={`/languages`}><Button className={classes.margin}>Languages</Button></Link>
           </Grid>
           <div className={classes.content}>
             <Switch>
-              <Route exact path={`${process.env.PUBLIC_URL}/programming`} component={Programming} />
+              <Route exact path={`${process.env.PUBLIC_URL}/`} component={Programming} />
               <Route exact path={`${process.env.PUBLIC_URL}/softSkills`} component={SoftSkills} />
               <Route exact path={`${process.env.PUBLIC_URL}/tools`} component={Tools} />
               <Route exact path={`${process.env.PUBLIC_URL}/languages`} component={Languages} />

@@ -1,5 +1,6 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
+import {AnimatedSwitch} from 'react-router-transition';
 import MainLayout from './components/layout/MainLayout/MainLayout';
 // import Dashboard from './components/views/Dashboard/Dashboard.js';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
@@ -8,6 +9,7 @@ import Programming from './components/views/Skills/Programming';
 import SoftSkills from './components/views/Skills/SoftSkills';
 import Tools from './components/views/Skills/Tools';
 import Languages from './components/views/Skills/Languages';
+import styles from './styles.scss';
 
 const theme = createTheme({
   palette: {
@@ -20,9 +22,15 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Droid Sans',
+    fontFamily: 'Slabo 27px',
     h1: {
-      fontFamily: 'Lato',
+      fontFamily: 'Carattere',
+    },
+    h3: {
+      fontFamily: 'Carattere',
+    },
+    h2: {
+      fontFamily: 'Carattere',
     },
   },
   props: {
@@ -70,15 +78,20 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter basename={'/programming'}>
+      <BrowserRouter basename={'/'}>
         <Navigation />
         <MainLayout>
-          <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/programming`} component={Programming} />
-            <Route exact path={`${process.env.PUBLIC_URL}/softSkills`} component={SoftSkills} />
-            <Route exact path={`${process.env.PUBLIC_URL}/tools`} component={Tools} />
-            <Route exact path={`${process.env.PUBLIC_URL}/languages`} component={Languages} />
-          </Switch>
+          <AnimatedSwitch
+            atEnter={{ opacity: 0 }}
+            atLeave={{ opacity: 0 }}
+            atActive={{ opacity: 1 }}
+            className={styles.switchWrapper}
+          >
+            <Route exact path={`/`} component={Programming} />
+            <Route exact path={`/softSkills`} component={SoftSkills} />
+            <Route exact path={`/tools`} component={Tools} />
+            <Route exact path={`/languages`} component={Languages} />
+          </AnimatedSwitch>
         </MainLayout>
       </BrowserRouter>
     </ThemeProvider>

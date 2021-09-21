@@ -2,82 +2,78 @@
     "cards": [
         {
             "id": "1",
-            "avatar": "R",
             "title": "Currency app",
             "subhead": "25 august, 2021",
             "cardMedia": {
                 "image": "https://i.postimg.cc/hvJcnyhd/currencyapp.png",
                 "title": "React redux firebase"
             },
-            "cardContent": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like",
+            "cardContent": "This is a simple currency app that fetching data from national polish bank.",
             "cardActions": {
                 "gitLink": "http://github.com",
                 "siteLink": "http://heroku.com"
             },
             "cardContentColapse": {
-                "firstParagraph": "Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.",
-                "secondParagraph": "Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook",
-                "thirdParagraph": "Set aside off of the heat to let rest for 10 minutes, and then serve."
+                "firstParagraph": "Functionality of this app: ",
+                "secondParagraph": "Registration and login page, list of all available currencies from national polish bank API, list of fauvorite currencies of user",
+                "thirdParagraph": "Technology stack: React, Redux, Material-ui, Firebase, React-router, Eslint/Prettier and more... "
             }     
         },
         {
             "id": "2",
-            "avatar": "R",
             "title": "Project pizzeria",
             "subhead": "20 may, 2021",
             "cardMedia": {
                 "image": "https://i.postimg.cc/PqcQQGHs/Pizzeria.png",
                 "title": "Vanilla js"
             },
-            "cardContent": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like",
+            "cardContent": "This is a pizzeria website where you can order pizza or book a table",
             "cardActions": {
                 "gitLink": "http://github.com",
                 "siteLink": "http://heroku.com"
             },
             "cardContentColapse": {
-                "firstParagraph": "Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.",
-                "secondParagraph": "Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook",
-                "thirdParagraph": "Set aside off of the heat to let rest for 10 minutes, and then serve."
+                "firstParagraph": "Functionality of this app",
+                "secondParagraph": "This app have three pages wich are: main page, order page where you can order pizzeria products and booking page where you can book a table for you in hours when you need",
+                "thirdParagraph": "Technology stack: html, css, sass, es6"
             }     
         },
         {
             "id": "3",
-            "avatar": "R",
             "title": "Travel agency",
-            "subhead": "14 september, 2021",
+            "subhead": "14 jully, 2021",
             "cardMedia": {
                 "image": "https://i.postimg.cc/25fzbyqP/Travel-Agency.png",
                 "title": "Paella dish"
             },
-            "cardContent": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like",
+            "cardContent": "This is a travel agency website where you can find many nice travels and form to order it",
             "cardActions": {
                 "gitLink": "http://github.com",
                 "siteLink": "http://heroku.com"
             },
             "cardContentColapse": {
-                "firstParagraph": "Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.",
-                "secondParagraph": "Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook",
-                "thirdParagraph": "Set aside off of the heat to let rest for 10 minutes, and then serve."
+                "firstParagraph": "Functionality of this app",
+                "secondParagraph": "There are several pages of travel destinations and filter for it. You can find travels in diferent countries or duration. Travel to place with beach or mountains and more ",
+                "thirdParagraph": "Technology stack: React, Redux, Material-ui, Firebase, React-router, Eslint/Prettier and more... "
             }     
         },
         {
             "id": "4",
-            "avatar": "R",
             "title": "Internet shop",
             "subhead": "20 may, 2021",
             "cardMedia": {
                 "image": "https://i.postimg.cc/GmfXqTP5/shop.png",
                 "title": "Vanilla js"
             },
-            "cardContent": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like",
+            "cardContent": "This is a internet shop e-comerce webpage",
             "cardActions": {
                 "gitLink": "http://github.com",
                 "siteLink": "http://heroku.com"
             },
             "cardContentColapse": {
-                "firstParagraph": "Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.",
-                "secondParagraph": "Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook",
-                "thirdParagraph": "Set aside off of the heat to let rest for 10 minutes, and then serve."
+                "firstParagraph": "Functionality of this app",
+                "secondParagraph": "This is a simple website with carousel and several sections with clothes building with Bootstrap",
+                "thirdParagraph": "Technology stack: html, css, sass, Bootstrap"
             }     
         },
         {
@@ -89,15 +85,15 @@
                 "image": "https://i.postimg.cc/QtTk66NB/ToDoList.png",
                 "title": "React redux"
             },
-            "cardContent": "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like",
+            "cardContent": "This is a to-do list with posibility to create, edit and find lists. Also you can drag-n-drop your tasks between columns",
             "cardActions": {
                 "gitLink": "http://github.com",
                 "siteLink": "http://heroku.com"
             },
             "cardContentColapse": {
-                "firstParagraph": "Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.",
-                "secondParagraph": "Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook",
-                "thirdParagraph": "Set aside off of the heat to let rest for 10 minutes, and then serve."
+                "firstParagraph": "Functionality of this app",
+                "secondParagraph": "To-Do list app biulded with react. Drag-n-drop functionality, add lists or elements and more..  ",
+                "thirdParagraph": "Technology stack: React, Redux, Material-ui "
             }     
         }
         
