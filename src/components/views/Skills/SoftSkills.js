@@ -7,19 +7,11 @@ import { GiAk47, GiRollingEnergy, GiChainLightning, GiYinYang, GiTrophy } from '
 
 
 const useStyles = makeStyles((theme) => ({
-  marginTop: {
-    marginTop: theme.spacing(9),
-  },
-  paper: {
-    padding: theme.spacing(9),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  margin: {
-    margin: theme.spacing(1),
-  },
   icon: {
-   
+    fontSize: '70px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '30px',
+    },
   },
 }));
 
@@ -32,24 +24,24 @@ const SoftSkills = () => {
     <Grid container
       spacing={2}
       justifyContent="center">
-      <Grid item xs={3} className={classes.icon}><TiMessages size={70} />
-        <Typography>Comunicated</Typography></Grid>  
-      <Grid item xs={3} className={classes.icon}><GiTrophy size={70} />
-        <Typography>Results-oriented</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><GiChainLightning size={70} />
-        <Typography>Team player</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><FaBrain size={70} />
-        <Typography>Trainable</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><GiAk47 size={70} />
-        <Typography>Troubleshoting</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><FaRegSmileBeam size={70} />
-        <Typography>Motivated</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><FaMagic size={70} />
-        <Typography>Creative</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><GiRollingEnergy size={70} />
-        <Typography>Energy</Typography></Grid>  
-      <Grid item xs={3} className={classes.icon}><GiYinYang size={70} />
-        <Typography>Work-life balance</Typography></Grid>        
+      <Grid item xs={6} md={3} className={classes.icon}><TiMessages />
+        <Typography >Comunicated</Typography></Grid>  
+      <Grid item xs={6} md={3} className={classes.icon}><GiTrophy />
+        <Typography >Results-oriented</Typography></Grid> 
+      <Grid item xs={6} md={3} className={classes.icon}><GiChainLightning />
+        <Typography >Team player</Typography></Grid> 
+      <Grid item xs={6} md={3} className={classes.icon}><FaBrain />
+        <Typography >Trainable</Typography></Grid> 
+      <Grid item xs={6} md={3} className={classes.icon}><GiAk47 />
+        <Typography >Troubleshoting</Typography></Grid> 
+      <Grid item xs={6} md={3} className={classes.icon}><FaRegSmileBeam />
+        <Typography >Motivated</Typography></Grid> 
+      <Grid item xs={6} md={3} className={classes.icon}><FaMagic />
+        <Typography >Creative</Typography></Grid> 
+      <Grid item xs={6} md={3} className={classes.icon}><GiRollingEnergy />
+        <Typography >Energy</Typography></Grid>  
+      <Grid item xs={6} md={3} className={classes.icon}><GiYinYang />
+        <Typography >Work-life balance</Typography></Grid>        
     </Grid>
   );
 

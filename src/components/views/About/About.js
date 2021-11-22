@@ -19,10 +19,26 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     minHeight: '70vh',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: theme.spacing(2),
+      paddingTop: theme.spacing(4),
+      minHeight: '100vh',
+    },
   },
   mainFeaturesPostContent: {
     position: 'relative',
     padding: theme.spacing(6),
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(2),
+    },
+  },
+  mainFeaturesPostImage: {
+    position: 'relative',
+    padding: theme.spacing(5),
+    marginLeft: theme.spacing(2),
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    },
   },
   marginTop: {
     marginTop: theme.spacing(9),
@@ -79,7 +95,7 @@ const About = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item sm={6}>
+            <Grid item sm={12} md={6}>
               <div className={classes.mainFeaturesPostContent}>
                 <Typography
                   component="h1"
@@ -165,7 +181,7 @@ const About = () => {
                 </Grid>
               </div> 
             </Grid>
-            <Grid item sm={6}>
+            <Grid item sm={12} md={6}>
               <div className={classes.mainFeaturesPostImage}>
                 <div className={classes.mainPhoto}>
                   <Badge

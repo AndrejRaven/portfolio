@@ -17,9 +17,17 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    [theme.breakpoints.down('md')]: {
+      marginRight: theme.spacing(1),
+    },
   },
   title: {
     flexGrow: 1,
+  },
+  nav: {
+    [theme.breakpoints.down('md')]: {
+      display: 'none',
+    }, 
   },
 }));
 
@@ -35,9 +43,11 @@ const Navigation = () =>  {
             <Typography variant="h6" className={classes.title}>
             Andrej Babiak 
             </Typography>
-            <Button color="inherit" href="#skills">Skills</Button>
-            <Button color="inherit" href="#projects">Projects</Button>
-            <Button color="inherit" href="#eduwork">Education / Work Expiriance</Button>
+            <div className={classes.nav}>
+              <Button color="inherit" href="#skills">Skills</Button>
+              <Button color="inherit" href="#projects">Projects</Button>
+              <Button color="inherit" href="#eduwork">Education / Work Expiriance</Button>
+            </div>
           </Toolbar>
         </AppBar>
       </div>

@@ -112,7 +112,7 @@ const Projects = () => {
           </Typography>         
         </Grid>  
         {cards.map((card, i) => (
-          <Grid item xs={4} className={classes.marginTopCard} key={card.id}>
+          <Grid item xs={12} md={4} className={classes.marginTopCard} key={card.id}>
             <Card className={classes.cardRoot}>
               <CardHeader
                 title={card.title}

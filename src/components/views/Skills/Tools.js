@@ -4,19 +4,11 @@ import {  SiEslint, SiVisualstudiocode, SiCanva, SiAdobephotoshop, SiJenkins, Si
 
 
 const useStyles = makeStyles((theme) => ({
-  marginTop: {
-    marginTop: theme.spacing(9),
-  },
-  paper: {
-    padding: theme.spacing(9),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  margin: {
-    margin: theme.spacing(1),
-  },
   icon: {
-    
+    fontSize: '70px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '30px',
+    },
   },
 }));
 
@@ -29,17 +21,17 @@ const Tools = () => {
     <Grid container
       spacing={2}
       justifyContent="center">
-      <Grid item xs={3} className={classes.icon}><SiEslint size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><SiEslint />
         <Typography>eslint</Typography></Grid>  
-      <Grid item xs={3} className={classes.icon}><SiVisualstudiocode size={70} />
+      <Grid item xs={6} md={3}  className={classes.icon}><SiVisualstudiocode />
         <Typography>Visual Studio</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiCanva size={70} />
+      <Grid item xs={6} md={3}  className={classes.icon}><SiCanva />
         <Typography>Canva</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiAdobephotoshop size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><SiAdobephotoshop />
         <Typography>Adobe photoshop</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiJenkins size={70} />
+      <Grid item xs={6} md={3}  className={classes.icon}><SiJenkins />
         <Typography>Jenkins</Typography></Grid>
-      <Grid item xs={3} className={classes.icon}><SiJira size={70} />
+      <Grid item xs={6} md={3}  className={classes.icon}><SiJira />
         <Typography>Jira</Typography></Grid>         
     </Grid>
   );

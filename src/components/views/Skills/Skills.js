@@ -16,19 +16,30 @@ import Languages from './Languages';
 const useStyles = makeStyles((theme) => ({
   marginTop: {
     marginTop: theme.spacing(9),
+    [theme.breakpoints.down('md')]: {
+      marginTop: theme.spacing(3),
+    },
   },
   paper: {
     padding: theme.spacing(9),
     textAlign: 'center',
     color: '#9AC1D9',
     background: '#0D1E40',
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(2),
+      marginBottom: theme.spacing(4),
+    },
   },
   margin: {
     margin: theme.spacing(1),
     color: '#9AC1D9',
   },
   icon: {
-    background: theme.palette.grey[400], 
+    background: theme.palette.grey[400],
+    fontSize: '70px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '30px',
+    },
   },
 }));
 

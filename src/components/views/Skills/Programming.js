@@ -5,19 +5,11 @@ import { SiRedux, SiJavascript, SiGithub, SiBootstrap, SiMaterialUi } from 'reac
 
 
 const useStyles = makeStyles((theme) => ({
-  marginTop: {
-    marginTop: theme.spacing(9),
-  },
-  paper: {
-    padding: theme.spacing(9),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
-  margin: {
-    margin: theme.spacing(1),
-  },
   icon: {
-    
+    fontSize: '70px',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '30px',
+    },
   },
 }));
 
@@ -30,23 +22,23 @@ const Programming = () => {
     <Grid container
       spacing={2}
       justifyContent="center">
-      <Grid item xs={3} className={classes.icon}><FaReact size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><FaReact />
         <Typography>React</Typography></Grid>  
-      <Grid item xs={3} className={classes.icon}><FaHtml5 size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><FaHtml5 />
         <Typography>HTML5</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><FaCss3Alt size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><FaCss3Alt />
         <Typography>CSS3</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiRedux size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><SiRedux />
         <Typography>Redux</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiJavascript size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><SiJavascript />
         <Typography>JavaScript/ES6</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiGithub size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><SiGithub />
         <Typography>Git</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><SiBootstrap size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><SiBootstrap />
         <Typography>Bootstrap</Typography></Grid> 
-      <Grid item xs={3} className={classes.icon}><FaSass size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><FaSass />
         <Typography>Sass</Typography></Grid>  
-      <Grid item xs={3} className={classes.icon}><SiMaterialUi size={70} />
+      <Grid item xs={6} md={3} className={classes.icon}><SiMaterialUi />
         <Typography>MaterialUi</Typography></Grid>        
     </Grid>
   );
