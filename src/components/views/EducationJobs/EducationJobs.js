@@ -35,9 +35,8 @@ const EducationJobs = () => {
   const classes = useStyles();
 
   return (
-
-    <section className={classes.marginTop}>
-      <Paper className={classes.mainFeaturesPost} style={{ background: 'linear-gradient(13deg, rgba(68,39,68,1) 45%, rgba(100,180,163,1) 100%)'}}>
+    <section className={classes.marginTop} id="#eduwork">
+      <Paper className={classes.mainFeaturesPost} style={{ background: 'linear-gradient(13deg, rgba(160,131,175,1) 45%, rgba(236,230,239,1) 100%)'}}>
         <Container fixed> 
           <Grid container
             direction="row"

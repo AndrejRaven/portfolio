@@ -32,9 +32,9 @@ const Navigation = () =>  {
             <Typography variant="h6" className={classes.title}>
             Andrej Babiak 
             </Typography>
-            <Button color="inherit">Skills</Button>
-            <Button color="inherit">Projects</Button>
-            <Button color="inherit">Education / Work Expiriance</Button>
+            <Button color="inherit" href="#skills">Skills</Button>
+            <Button color="inherit" href="#projects">Projects</Button>
+            <Button color="inherit" href="#eduwork">Education / Work Expiriance</Button>
           </Toolbar>
         </AppBar>
       </div>

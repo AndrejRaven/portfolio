@@ -2,8 +2,7 @@ import { Container, makeStyles,
   Grid, Typography, Card, CardMedia, CardContent,
   CardActions, IconButton, CardHeader, Collapse} from '@material-ui/core';
 import React from 'react';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import { cards } from '../../../data/cardProjectData.json';
 import clsx from 'clsx';
 
@@ -69,14 +68,14 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: '56.25%', // 16:9
   },
   expand: {
-    transform: 'rotate(0deg)',
+    transform: 'rotate(180deg)',
     marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
   },
   expandOpen: {
-    transform: 'rotate(180deg)',
+    transform: 'rotate(0deg)',
   },
   avatar: {
     backgroundColor: theme.palette.error,
@@ -129,21 +128,15 @@ const Projects = () => {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                  <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="share">
-                  <ShareIcon />
-                </IconButton>
                 <IconButton
                   className={clsx(classes.expand, {
                     [classes.expandOpen]: expandedId,
                   })}
                   onClick={() => handleExpandClick(i)}
                   aria-expanded={expandedId === i}
-                  aria-label="show more"
+                  aria-label={`show more ${i}`}
                 >
-                  <ShareIcon />
+                  <KeyboardArrowDownIcon />
                 </IconButton>
               </CardActions>
               <Collapse in={expandedId === i} timeout="auto" unmountOnExit>
