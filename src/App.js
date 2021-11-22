@@ -17,10 +17,13 @@ const theme = createTheme({
   palette: {
     type: 'light',
     primary: {
-      main: '#A083AF',
+      main: '#0D1E40',
     },
     secondary: {
-      main: '#ECE6EF',
+      main: '#734D6C',
+    },
+    text: {
+      primary: '#9AC1D9',
     },
   },
   typography: {
@@ -45,6 +48,11 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: 'Carattere',
+    },
+  },
+  common: {
+    color: {
+      light: '#9AC1D9',
     },
   },
   props: {
@@ -111,7 +119,7 @@ function App() {
           options={{
             background: {
               color: {
-                value: '#ECE6EF',
+                value: '#0D2840',
               },
             },
             fpsLimit: 30,
@@ -145,10 +153,10 @@ function App() {
             },
             particles: {
               color: {
-                value: '#A083AF',
+                value: '#734D6C',
               },
               links: {
-                color: '#A083AF',
+                color: '#734D6C',
                 distance: 150,
                 enable: true,
                 opacity: 0.5,
@@ -160,7 +168,7 @@ function App() {
               move: {
                 direction: 'none',
                 enable: true,
-                outMode: 'bounce',
+                outMode: 'out',
                 random: false,
                 speed: 1,
                 straight: false,

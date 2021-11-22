@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     justifyContent: 'center', 
+    color: '#9AC1D9',
   },
 }));
 

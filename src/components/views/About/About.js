@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
 
   mainFeaturesPost: {
     position: 'relative',
-    color: theme.palette.common.white,
+    color: theme.palette.text.primary,
     marginBottom: theme.spacing(4),
     paddingTop: theme.spacing(8),
     backgroundSize: 'cover',
@@ -47,12 +47,12 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(7) * 5,
   },
   linkIcon: {
-    color: '#fafafa',
+    color: '#AFBF9F',
     marginTop: '10px',
     '&:hover': {
       transform: 'scale(130%)',
       transition: '0.5s linear',
-      color: theme.palette.primary.main,
+      color: theme.palette.text.primary,
     },
   },
 }));
@@ -98,7 +98,7 @@ const About = () => {
                       Firebase and MaterialUi. I like to code and solving problems. My goal is to create pure performance code, stable
                       and in short terms.I like to stay active, travelsand sport. 
                 </Typography>
-                <Button variant="contained" color="primary" className={classes.margin} href='mailto:https://andrejbabak221@gmail.com' target="_blank">
+                <Button variant="contained" size="large" color="primary" className={classes.margin} href='mailto:https://andrejbabak221@gmail.com' target="_blank">
                     Get in touch
                 </Button>
                 <Grid container spacing={3}>

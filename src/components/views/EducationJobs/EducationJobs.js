@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 
   mainFeaturesPost: {
     position: 'relative',
-    color: theme.palette.common.white,
+    color: theme.palette.text.primary,
     marginBottom: theme.spacing(4),
     paddingTop: theme.spacing(8),
     backgroundSize: 'cover',
@@ -36,7 +36,7 @@ const EducationJobs = () => {
 
   return (
     <section className={classes.marginTop} id="#eduwork">
-      <Paper className={classes.mainFeaturesPost} style={{ background: 'linear-gradient(13deg, rgba(160,131,175,1) 45%, rgba(236,230,239,1) 100%)'}}>
+      <Paper className={classes.mainFeaturesPost} style={{ background: 'linear-gradient(13deg, rgba(13, 24, 38, 1) 45%, rgba(68, 61, 115, 1) 100%)'}}>
         <Container fixed> 
           <Grid container
             direction="row"
@@ -66,13 +66,17 @@ const EducationJobs = () => {
                       <Avatar src={knteu} />
                     </ListItemAvatar>
                     <ListItemText primary="Chmielnitsky College of Trade and Economy
-                        " secondary="Sep 1, 2007 - May 31, 2010" />
+                        " secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>Sep 1, 2007 - May 31, 2010</Typography>
+                    }/>
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar src={knteu} />
                     </ListItemAvatar>
-                    <ListItemText primary="Kiev University of Trade and Economy" secondary="Sep 1, 2010 - May 31, 2014" />
+                    <ListItemText primary="Kiev University of Trade and Economy" secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>Sep 1, 2010 - May 31, 2014</Typography>
+                    } />
                   </ListItem>
                 </List>
                 <Typography
@@ -88,25 +92,33 @@ const EducationJobs = () => {
                     <ListItemAvatar>
                       <Avatar src={caIcon} />
                     </ListItemAvatar>
-                    <ListItemText primary="Codeacademy.com" secondary=" 2018 - 2019" />
+                    <ListItemText primary="Codeacademy.com" secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2018 - 2019</Typography>
+                    } />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar src={udemy} />
                     </ListItemAvatar>
-                    <ListItemText primary="Udemy course Selenium Java" secondary="2019 - 2020" />
+                    <ListItemText primary="Udemy course Selenium Java" secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2019 - 2020</Typography>
+                    } />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar src={udemy} />
                     </ListItemAvatar>
-                    <ListItemText primary="Udemy course Frontend Developer" secondary="2020 - 2021" />
+                    <ListItemText primary="Udemy course Frontend Developer" secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2020 - 2021</Typography>
+                    } />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar src={kodilla} />
                     </ListItemAvatar>
-                    <ListItemText primary="Kodilla.com.pl Frontend Developer" secondary="2020 - 2021" />
+                    <ListItemText primary="Kodilla.com.pl Frontend Developer" secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2020 - 2021</Typography>
+                    } />
                   </ListItem>
                 </List>
               </div> 
@@ -127,42 +139,54 @@ const EducationJobs = () => {
                       <Avatar src={europroduct} />
                     </ListItemAvatar>
                     <ListItemText primary="Europroduct | Kiev, Ukraine
-                        " secondary="2012 - 2013 | Merchandiser" />
+                        " secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2012 - 2013 | Merchandiser</Typography>
+                    } />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar src={lgLogo} />
                     </ListItemAvatar>
                     <ListItemText primary="Leader-group | Chmielnitski , Ukraina
-                        " secondary="2013 - 2016 | Sales Representative" />
+                        " secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2013 - 2016 | Sales Representative</Typography>
+                    } />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar src={lgLogo} />
                     </ListItemAvatar>
                     <ListItemText primary="Leader-group | Chmielnitski, Ukraina
-                        " secondary="2016 - 2018 | Management and accounting" />
+                        " secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2016 - 2018 | Management and accounting</Typography>
+                    }  />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar src={shcenker} />
                     </ListItemAvatar>
                     <ListItemText primary="DB Schenker | Goleniow, Poland
-                        " secondary="2018 - 2019 | Warehouse worker" />
+                        " secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2018 - 2019 | Warehouse worker</Typography>
+                    } />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar src={meblomak} />
                     </ListItemAvatar>
                     <ListItemText primary="Meblomak | Rumia, Poland
-                        " secondary="2019 - 2019 | Warehouse worker" />
+                        " secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2019 - 2019 | Warehouse worker</Typography>
+                    } />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
                       <Avatar src={dhl} />
                     </ListItemAvatar>
                     <ListItemText primary="DHL | Gdansk, Poland
-                        " secondary="2019 - 2021 | Courier" />
+                        " secondary={
+                      <Typography style={{ color: '#AFBF9F', fontSize: '0.8rem' }}>2019 - 2021 | Courier</Typography>
+                    } />
                   </ListItem>
                 </List>
               </div> 

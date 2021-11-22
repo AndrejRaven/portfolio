@@ -17,6 +17,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(9),
     textAlign: 'center',
     color: theme.palette.text.secondary,
+    background: '#070A0D',
   },
   mainFeaturesPost: {
     position: 'relative',
@@ -42,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     bottom: 0,
     right: 0,
     left: 0,
-    background: 'rgba(0,0,0,.3)',
+    background: '#070A0D',
   },
   large: {
     width: theme.spacing(7) * 5,

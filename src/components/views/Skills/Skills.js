@@ -20,11 +20,12 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(9),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
-    background: theme.palette.grey[100], 
+    color: '#9AC1D9',
+    background: '#0D1E40',
   },
   margin: {
     margin: theme.spacing(1),
+    color: '#9AC1D9',
   },
   icon: {
     background: theme.palette.grey[400], 

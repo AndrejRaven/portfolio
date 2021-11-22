@@ -12,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  color: {
+    color: theme.palette.text.primary,
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -27,7 +30,7 @@ const Navigation = () =>  {
     <React.Fragment>
       <CssBaseline />
       <div className={classes.root}>
-        <AppBar position="sticky" disablegutters='true'>
+        <AppBar position="sticky" disablegutters='true' className={classes.color}>
           <Toolbar>
             <Typography variant="h6" className={classes.title}>
             Andrej Babiak 

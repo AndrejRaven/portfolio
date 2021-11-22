@@ -12,7 +12,7 @@ import iconReact from '../../../static/images/iconReact.svg';
 const useStyles = makeStyles((theme) => ({
   mainFeaturesPost: {
     position: 'relative',
-    color: theme.palette.common.white,
+    color: '#9AC1D9',
     marginBottom: theme.spacing(4),
     paddingTop: theme.spacing(8),
     backgroundSize: 'cover',
@@ -83,7 +83,7 @@ const MainLayout = () => {
                     color="inherit"
                     gutterBottom
                   >
-                            Hi I`m Andrej Babiak    
+                            Hi, I`m Andrej Babiak    
                   </Typography>
                   <Typography
                     variant="h5"
