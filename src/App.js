@@ -196,6 +196,7 @@ function App() {
                 random: true,
                 speed: 1,
                 straight: false,
+                bounce: false,
               },
               number: {
                 density: {
@@ -203,6 +204,7 @@ function App() {
                   value_area: 600,
                 },
                 value: 80,
+                limit: 100,
               },
               opacity: {
                 value: 0.5,
