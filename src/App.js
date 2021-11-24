@@ -14,6 +14,15 @@ import Particles from 'react-tsparticles';
 import styles from './styles.scss';
 
 const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1024,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
   palette: {
     type: 'light',
     primary: {
@@ -97,6 +106,21 @@ const theme = createTheme({
   },
 });
 
+theme.typography.h3 = {
+  fontSize: '3rem',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '2rem',
+    textTransform: 'uppercase',
+  },
+};
+
+theme.typography.h5 = {
+  fontSize: '1.5rem',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.2rem',
+  },
+};
+
 function App() {
 
   const particlesInit = (main) => {
@@ -122,7 +146,7 @@ function App() {
                 value: '#0D2840',
               },
             },
-            fpsLimit: 30,
+            fpsLimit: 60,
             interactivity: {
               events: {
                 onClick: {
@@ -140,13 +164,13 @@ function App() {
                   distance: 400,
                   duration: 2,
                   opacity: 0.8,
-                  size: 30,
+                  size: 60,
                 },
                 push: {
                   quantity: 4,
                 },
                 repulse: {
-                  distance: 200,
+                  distance: 100,
                   duration: 0.4,
                 },
               },
@@ -169,14 +193,14 @@ function App() {
                 direction: 'none',
                 enable: true,
                 outMode: 'out',
-                random: false,
+                random: true,
                 speed: 1,
                 straight: false,
               },
               number: {
                 density: {
                   enable: true,
-                  value_area: 800,
+                  value_area: 600,
                 },
                 value: 80,
               },

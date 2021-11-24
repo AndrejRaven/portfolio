@@ -25,16 +25,16 @@ const Languages = () => {
       spacing={2}
       justifyContent="center"
       alignItems="center">
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12} sm={3}>
         <Flag country="PL" className={classes.icon} />
         <Typography>Polish</Typography></Grid>
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12}  sm={3}>
         <Flag country="GB" className={classes.icon} />
         <Typography>English</Typography></Grid>     
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12}  sm={3}>
         <Flag country="RU" className={classes.icon} />
         <Typography>Russian</Typography></Grid>             
-      <Grid item xs={12} md={3}>
+      <Grid item xs={12}  sm={3}>
         <Flag country="UA" className={classes.icon} />
         <Typography>Ukrainian</Typography></Grid>     
     </Grid>

@@ -1,5 +1,12 @@
+$base-size: 12px;
+
 body {
-  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: ($base-size * 1.3);
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  overflow-y: scroll;
 }
 
 .switchWrapper {

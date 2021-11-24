@@ -112,7 +112,7 @@ const Projects = () => {
           </Typography>         
         </Grid>  
         {cards.map((card, i) => (
-          <Grid item xs={12} md={4} className={classes.marginTopCard} key={card.id}>
+          <Grid item xs={12} sm={6} md={4} className={classes.marginTopCard} key={card.id}>
             <Card className={classes.cardRoot}>
               <CardHeader
                 title={card.title}
@@ -135,7 +135,7 @@ const Projects = () => {
                   })}
                   onClick={() => handleExpandClick(i)}
                   aria-expanded={expandedId === i}
-                  aria-label={`show more ${i}`}
+                  aria-label={`show more`}
                 >
                   <KeyboardArrowDownIcon />
                 </IconButton>

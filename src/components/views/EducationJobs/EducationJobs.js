@@ -21,10 +21,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     minHeight: '70vh',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(2),
+      paddingTop: theme.spacing(4),
+    },
   },
   mainFeaturesPostContent: {
     position: 'relative',
     padding: theme.spacing(6),
+    [theme.breakpoints.down('sm')]: {
+      padding: theme.spacing(2),
+    },
   },
   marginTop: {
     marginTop: theme.spacing(9),

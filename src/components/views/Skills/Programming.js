@@ -22,23 +22,23 @@ const Programming = () => {
     <Grid container
       spacing={2}
       justifyContent="center">
-      <Grid item xs={6} md={3} className={classes.icon}><FaReact />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><FaReact />
         <Typography>React</Typography></Grid>  
-      <Grid item xs={6} md={3} className={classes.icon}><FaHtml5 />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><FaHtml5 />
         <Typography>HTML5</Typography></Grid> 
-      <Grid item xs={6} md={3} className={classes.icon}><FaCss3Alt />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><FaCss3Alt />
         <Typography>CSS3</Typography></Grid> 
-      <Grid item xs={6} md={3} className={classes.icon}><SiRedux />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><SiRedux />
         <Typography>Redux</Typography></Grid> 
-      <Grid item xs={6} md={3} className={classes.icon}><SiJavascript />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><SiJavascript />
         <Typography>JavaScript/ES6</Typography></Grid> 
-      <Grid item xs={6} md={3} className={classes.icon}><SiGithub />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><SiGithub />
         <Typography>Git</Typography></Grid> 
-      <Grid item xs={6} md={3} className={classes.icon}><SiBootstrap />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><SiBootstrap />
         <Typography>Bootstrap</Typography></Grid> 
-      <Grid item xs={6} md={3} className={classes.icon}><FaSass />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><FaSass />
         <Typography>Sass</Typography></Grid>  
-      <Grid item xs={6} md={3} className={classes.icon}><SiMaterialUi />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><SiMaterialUi />
         <Typography>MaterialUi</Typography></Grid>        
     </Grid>
   );

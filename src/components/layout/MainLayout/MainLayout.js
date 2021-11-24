@@ -8,6 +8,7 @@ import Footer from '../../views/Footer/Footer';
 import Skills from '../../views/Skills/Skills';
 import avatar from '../../../static/images/avatar.jpg';
 import iconReact from '../../../static/images/iconReact.svg';
+import { useMediaQuery } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   mainFeaturesPost: {
@@ -19,26 +20,36 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     minHeight: '70vh',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(2),
       paddingTop: theme.spacing(4),
-      minHeight: '100vh',
+      minHeight: '80vh',
+    },
+    [theme.breakpoints.down('md')]: {
+      marginBottom: theme.spacing(3),
+      paddingTop: theme.spacing(6),
+      minHeight: '50vh',
     },
   },
   mainFeaturesPostContent: {
     position: 'relative',
     padding: theme.spacing(6),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(2),
+    },
+    [theme.breakpoints.down('md')]: {
+      padding: theme.spacing(5),
     },
   },
   mainFeaturesPostImage: {
     position: 'relative',
     padding: theme.spacing(5),
     marginLeft: theme.spacing(2),
-    [theme.breakpoints.down('md')]: {
-      padding: theme.spacing(1),
-      marginLeft: 0,
+    [theme.breakpoints.down('sm')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.up('sm')]: {
+      display: 'inline',
     },
   },
   overlay: {
@@ -52,17 +63,39 @@ const useStyles = makeStyles((theme) => ({
   large: {
     width: theme.spacing(7) * 5,
     height: theme.spacing(7) * 5,
+    [theme.breakpoints.down('sm')]: {
+      width: theme.spacing(5) * 2,
+      height: theme.spacing(5) * 2,
+    },
     [theme.breakpoints.down('md')]: {
-      width: theme.spacing(7) * 2,
-      height: theme.spacing(7) * 2,
+      width: theme.spacing(7) * 3,
+      height: theme.spacing(7) * 3,
     },
   },
   margin: {
-    margin: theme.spacing(1),
+    marginRight: theme.spacing(2),
+    marginTop: theme.spacing(1),
   },
   mainPhoto: {
     display: 'flex',
     flexDirection: 'row-reverse',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'row',
+    },
+    [theme.breakpoints.up('sm')]: {
+      flexDirection: 'flex',
+    },
+  },
+  buttonContainer: {
+    marginTop: '10%',
+    [theme.breakpoints.down('sm')]: {
+      display: 'grid',
+      marginTop: '50%',
+    },
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
+      marginTop: '20%',
+    },
   },
 }));
 
@@ -71,11 +104,24 @@ const SmallAvatar = withStyles((theme) => ({
     width: theme.spacing(7),
     height: theme.spacing(7),
     border: `2px solid ${theme.palette.background.paper}`,
+    [theme.breakpoints.down('sm')]: {
+      width: theme.spacing(3),
+      height: theme.spacing(3),
+    },
+    [theme.breakpoints.down('md')]: {
+      width: theme.spacing(5),
+      height: theme.spacing(5),
+    },
   },
 }))(Avatar);
 
 
 const MainLayout = () => {
+  const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down('sm'));
+
+  const buttonProps = {
+    size: isSmallScreen ? 'medium' : 'large',
+  };
   const classes = useStyles();
   
 
@@ -91,7 +137,7 @@ const MainLayout = () => {
               justifyContent="space-between"
               alignItems="center"
             >
-              <Grid item sm={12} md={6}>
+              <Grid item xs={12} sm={9} md={6}>
                 <div className={classes.mainFeaturesPostContent}>
                   <Typography
                     component="h1"
@@ -107,15 +153,17 @@ const MainLayout = () => {
                     paragraph>
                         Frontend react developer 
                   </Typography>
-                  <Button variant="contained" size="large" color="primary" className={classes.margin} href='mailto:https://andrejbabak221@gmail.com' target="_blank">
+                  <div className={classes.buttonContainer}>
+                    <Button variant="contained" {...buttonProps} color="primary" className={classes.margin} href='mailto:https://andrejbabak221@gmail.com' target="_blank">
                     Get in touch
-                  </Button>
-                  <Button variant="contained" size="large" color="secondary" className={classes.margin} href='https://drive.google.com/file/d/12N6U9i8NQMXcEQgjAPoFA5krBTwGUSww/view?usp=sharing' target="_blank">
+                    </Button>
+                    <Button variant="contained" {...buttonProps} color="secondary" className={classes.margin} href='https://drive.google.com/file/d/12N6U9i8NQMXcEQgjAPoFA5krBTwGUSww/view?usp=sharing' target="_blank">
                     View resume
-                  </Button>
+                    </Button>
+                  </div>
                 </div> 
               </Grid>
-              <Grid item sm={12} md={6}>
+              <Grid item xs={12} sm={3} md={6}>
                 <div className={classes.mainFeaturesPostImage}>
                   <div className={classes.mainPhoto}>
                     <Badge

@@ -21,17 +21,17 @@ const Tools = () => {
     <Grid container
       spacing={2}
       justifyContent="center">
-      <Grid item xs={6} md={3} className={classes.icon}><SiEslint />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><SiEslint />
         <Typography>eslint</Typography></Grid>  
-      <Grid item xs={6} md={3}  className={classes.icon}><SiVisualstudiocode />
+      <Grid xs={6} sm={4} md={3}  className={classes.icon}><SiVisualstudiocode />
         <Typography>Visual Studio</Typography></Grid> 
-      <Grid item xs={6} md={3}  className={classes.icon}><SiCanva />
+      <Grid xs={6} sm={4} md={3}  className={classes.icon}><SiCanva />
         <Typography>Canva</Typography></Grid> 
-      <Grid item xs={6} md={3} className={classes.icon}><SiAdobephotoshop />
+      <Grid xs={6} sm={4} md={3} className={classes.icon}><SiAdobephotoshop />
         <Typography>Adobe photoshop</Typography></Grid> 
-      <Grid item xs={6} md={3}  className={classes.icon}><SiJenkins />
+      <Grid xs={6} sm={4} md={3}  className={classes.icon}><SiJenkins />
         <Typography>Jenkins</Typography></Grid>
-      <Grid item xs={6} md={3}  className={classes.icon}><SiJira />
+      <Grid xs={6} sm={4} md={3}  className={classes.icon}><SiJira />
         <Typography>Jira</Typography></Grid>         
     </Grid>
   );

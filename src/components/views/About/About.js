@@ -19,16 +19,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     minHeight: '70vh',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(2),
       paddingTop: theme.spacing(4),
-      minHeight: '100vh',
+      minHeight: '50vh',
     },
   },
   mainFeaturesPostContent: {
     position: 'relative',
     padding: theme.spacing(6),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       padding: theme.spacing(2),
     },
   },
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     padding: theme.spacing(5),
     marginLeft: theme.spacing(2),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       display: 'none',
     },
   },
@@ -112,7 +112,7 @@ const About = () => {
                       Hi, I am Andrej,
                       frontend developer from Poland, currently living in Gdansk.I worked with such technologies like React and Redux,
                       Firebase and MaterialUi. I like to code and solving problems. My goal is to create pure performance code, stable
-                      and in short terms.I like to stay active, travelsand sport. 
+                      and in short terms.I like to stay active, travels and sport. 
                 </Typography>
                 <Button variant="contained" size="large" color="primary" className={classes.margin} href='mailto:https://andrejbabak221@gmail.com' target="_blank">
                     Get in touch
