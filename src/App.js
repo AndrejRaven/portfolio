@@ -146,7 +146,7 @@ function App() {
                 value: '#0D2840',
               },
             },
-            fpsLimit: 60,
+            fpsLimit: 30,
             interactivity: {
               events: {
                 onClick: {
@@ -203,8 +203,8 @@ function App() {
                   enable: true,
                   value_area: 600,
                 },
-                value: 80,
-                limit: 100,
+                value: 50,
+                limit: 70,
               },
               opacity: {
                 value: 0.5,
