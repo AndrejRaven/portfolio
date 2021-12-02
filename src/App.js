@@ -146,15 +146,15 @@ function App() {
                 value: '#0D2840',
               },
             },
-            fpsLimit: 30,
+            fpsLimit: 60,
             interactivity: {
               events: {
                 onClick: {
-                  enable: true,
+                  enable: false,
                   mode: 'push',
                 },
                 onHover: {
-                  enable: true,
+                  enable: false,
                   mode: 'repulse',
                 },
                 resize: true,
