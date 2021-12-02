@@ -100,7 +100,7 @@ const Projects = () => {
   return (
       
     <Container maxWidth='lg' className={classes.marginTop}>
-      <Grid container align='center'>
+      <Grid container spacing={3} align='center'>
         <Grid item xs={12}>
           <Typography
             component="h1"
