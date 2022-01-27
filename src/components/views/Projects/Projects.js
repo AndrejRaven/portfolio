@@ -1,117 +1,96 @@
-import { Container, makeStyles,  
+import { useState, useEffect } from 'react';
+import {
+  Container,
   Grid, Typography, Card, CardMedia, CardContent,
-  CardActions, IconButton, CardHeader, Collapse} from '@material-ui/core';
-import React from 'react';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import { cards } from '../../../data/cardProjectData.json';
-import clsx from 'clsx';
+  CardActions, IconButton, CardHeader, Collapse
+} from '@mui/material';
+// import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
-
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-        
-  },
-  paper: {
-    padding: theme.spacing(9),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    background: '#070A0D',
-  },
-  mainFeaturesPost: {
-    position: 'relative',
-    color: theme.palette.common.white,
-    marginBottom: theme.spacing(4),
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    minHeight: '50vh',
-  },
-  mainFeaturesPostContent: {
-    position: 'relative',
-    padding: theme.spacing(6),
-  },
-  mainFeaturesPostImage: {
-    position: 'relative',
-    padding: theme.spacing(5),
-    marginLeft: theme.spacing(2),
-  },
-  overlay: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-    background: '#070A0D',
-  },
-  large: {
-    width: theme.spacing(7) * 5,
-    height: theme.spacing(7) * 5,
-  },
-  margin: {
-    margin: theme.spacing(1),
-  },
-  marginTop: {
-    marginTop: theme.spacing(9),
-  },
-  marginTopCard: {
-    marginTop: theme.spacing(3),
-  },
-  icon: {
-    background: theme.palette.grey[400], 
-  },
-  cardRoot: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
-  },
-  expand: {
-    transform: 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: 'rotate(0deg)',
-  },
-  avatar: {
-    backgroundColor: theme.palette.error,
-  },
-  footer: {
-    justifyContent: 'center', 
-  },
-}));
+import SectionHeader from '../../elements/sectionHeader/SectionHeader';
+import { useHttp } from '../../../hooks/http.hook';
+import Spiner from '../../elements/spiner/Spiner';
 
 
 const Projects = () => {
+  const [cards, setCards] = useState([]);
+  const [expandedId, setExpandedId] = useState(-1);
 
-  const classes = useStyles();
-  const [expandedId, setExpandedId] = React.useState(-1);
-  
-  const handleExpandClick = (i) => {
-    setExpandedId(expandedId === i ? -1 : i);
-  };
+
+  const { request } = useHttp();
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  useEffect(() => {
+    console.log(cards);
+  }, [cards]);
+
+  const fetchProjects = () => {
+    request("http://localhost:3001/cards").
+      then(setCards)
+  }
+
+
+
+
 
 
   return (
-      
-    <Container maxWidth='lg' className={classes.marginTop}>
-      <Grid container spacing={3} align='center'>
-        <Grid item xs={12}>
-          <Typography
-            component="h1"
-            variant="h3"
-            color="inherit"
-            gutterBottom
-          >
-        My projects  
-          </Typography>         
-        </Grid>  
-        {cards.map((card, i) => (
+
+    <Container maxWidth='lg' sx={{ marginTop: '50px' }}>
+      <SectionHeader text="My projects" />
+      <Grid container>
+      {cards !== [] ? 
+        cards.map((card, i) => {
+          <Grid item xs={12} sm={6} md={4} key={card.id}>
+          <Card>
+            <CardHeader
+              title={card.title}
+              subheader={card.subhead}
+            />
+            <CardMedia
+              image={card.cardMedia.image}
+              title={card.cardMedia.title}
+            />
+            <CardContent>
+              <Typography variant="body2" color="textSecondary" component="p">
+                {card.cardContent}
+              </Typography>
+            </CardContent>
+            <CardActions disableSpacing>
+              <IconButton
+                onClick={() => handleExpandClick(i)}
+                aria-expanded={expandedId === i}
+                aria-label={`show more`}
+              >
+              </IconButton>
+            </CardActions>
+            <Collapse in={expandedId === i} timeout="auto" unmountOnExit>
+              <CardContent>
+                <Typography paragraph>{card.cardContentColapse.firstParagraph}</Typography>
+                <Typography paragraph>
+                  {card.cardContentColapse.secondParagraph}
+                </Typography>
+                <Typography paragraph>
+                  {card.cardContentColapse.thirdParagraph}
+                </Typography>
+              </CardContent>
+            </Collapse>
+          </Card>
+        </Grid>
+        })
+        : 
+      <Grid item xs={12}><Spiner /></Grid>
+      }
+      </Grid>
+    </Container>);
+
+};
+
+export default Projects;
+
+{/* {cards.map((card, i) => (
           <Grid item xs={12} sm={6} md={4} className={classes.marginTopCard} key={card.id}>
             <Card className={classes.cardRoot}>
               <CardHeader
@@ -137,7 +116,6 @@ const Projects = () => {
                   aria-expanded={expandedId === i}
                   aria-label={`show more`}
                 >
-                  <KeyboardArrowDownIcon />
                 </IconButton>
               </CardActions>
               <Collapse in={expandedId === i} timeout="auto" unmountOnExit>
@@ -153,10 +131,4 @@ const Projects = () => {
               </Collapse>
             </Card>
           </Grid>
-        ))}
-      </Grid>
-    </Container>); 
-  
-};  
-    
-export default Projects;
+        ))} */}

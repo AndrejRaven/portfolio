@@ -3,91 +3,29 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.12.0",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/styles": "^4.11.4",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.3.0",
+    "babel-eslint": "^10.1.0",
+    "concurrently": "^7.0.0",
     "country-flag-icons": "^1.4.0",
+    "json-server": "^0.17.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-flagkit": "^2.0.4",
-    "react-icons": "^4.2.0",
-    "react-router-dom": "5.2.0",
-    "react-router-transition": "^2.1.0",
-    "react-scripts": "4.0.3",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.0",
     "sass": "^1.44.0",
     "serve": "^13.0.2"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "concurrently \"react-scripts start\" \"npx json-server cardProjectData.json --port 3001\"",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
-  },
-  "eslintConfig": {
-    "env": {
-      "es6": true,
-      "browser": true,
-      "node": true,
-      "jest": true
-    },
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "plugins": [
-      "react"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
-    "rules": {
-      "indent": [
-        "error",
-        2,
-        {
-          "SwitchCase": 1
-        }
-      ],
-      "linebreak-style": [
-        "off"
-      ],
-      "quotes": [
-        "error",
-        "single",
-        {
-          "allowTemplateLiterals": true
-        }
-      ],
-      "semi": [
-        "error",
-        "always"
-      ],
-      "comma-dangle": [
-        "error",
-        "always-multiline"
-      ],
-      "no-console": "off"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.js": "eslint"
   },
   "browserslist": {
     "production": [
