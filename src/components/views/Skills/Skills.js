@@ -1,84 +1,49 @@
-/* eslint-disable react/no-children-prop */
-import { Container, Button, Paper, Grid, Typography, makeStyles} from '@material-ui/core';
-import React from 'react';
+import { Container, Button, Paper, Grid, Typography } from '@mui/material';
 import {
-  Switch,
+  Routes,
   Link,
-  Route,  
+  Route,
 } from 'react-router-dom';
 import Programming from './Programming';
 import SoftSkills from './SoftSkills';
 import Tools from './Tools';
 import Languages from './Languages';
 
-
-
-const useStyles = makeStyles((theme) => ({
-  marginTop: {
-    marginTop: theme.spacing(9),
-    [theme.breakpoints.down('md')]: {
-      marginTop: theme.spacing(3),
-    },
-  },
-  paper: {
-    padding: theme.spacing(9),
-    textAlign: 'center',
-    color: '#9AC1D9',
-    background: '#0D1E40',
-    [theme.breakpoints.down('md')]: {
-      padding: theme.spacing(2),
-      paddingBottom: theme.spacing(6),
-    },
-  },
-  margin: {
-    margin: theme.spacing(1),
-    color: '#9AC1D9',
-  },
-  icon: {
-    background: theme.palette.grey[400],
-    fontSize: '70px',
-    [theme.breakpoints.down('md')]: {
-      fontSize: '30px',
-    },
-  },
-}));
-
 const Skills = () => {
 
-  const classes = useStyles();
-
-
-  return(
-    <Container maxWidth='lg'
-
-      className={classes.marginTop}
-    >
-      <Paper elevation={3}
-        className={classes.paper}  >
+  return (
+    <Container maxWidth='lg' sx={{ marginTop: '100px', marginBottom: '100px'}}>
+      <Paper elevation={3} sx={{ textAlign: 'center' }} >
         <Grid container
           spacing={2}
           justifyContent="center"
         >
           <Grid item xs={12}>
-            <Typography 
+            <Typography
               component="h1"
               variant="h3"
               color="inherit"
               gutterBottom
-            >My technology stack</Typography>  
-            <Link to={`/`}><Button className={classes.margin}>Programming</Button></Link>
-            <Link to={`/tools`}><Button className={classes.margin}>Tools</Button></Link>
-            <Link to={`/softSkills`}><Button className={classes.margin}>Soft skills</Button></Link>
-            <Link to={`/languages`}><Button className={classes.margin}>Languages</Button></Link>
+            >My technology stack</Typography>
+            <Link to={`/`}><Button sx={{ margin: 1, fontSize: 16 }}>Programming</Button></Link>
+            <Link to={`/tools`}><Button sx={{ margin: 1, fontSize: 16 }}>Tools</Button></Link>
+            <Link to={`/softSkills`}><Button sx={{ margin: 1, fontSize: 16 }}>Soft skills</Button></Link>
+            <Link to={`/languages`}><Button sx={{ margin: 1, fontSize: 16 }}>Languages</Button></Link>
           </Grid>
-          <div className={classes.content}>
-            <Switch>
-              <Route exact path={`${process.env.PUBLIC_URL}/`} component={Programming} />
-              <Route exact path={`${process.env.PUBLIC_URL}/softSkills`} component={SoftSkills} />
-              <Route exact path={`${process.env.PUBLIC_URL}/tools`} component={Tools} />
-              <Route exact path={`${process.env.PUBLIC_URL}/languages`} component={Languages} />
-            </Switch>
-          </div>  
+          <div>
+            <Grid container
+              spacing={2}
+              justifyContent="center"
+              alignItems="center"
+              sx={{  minHeight: '500px' }}>
+              <Routes>
+                <Route exact path={`/`} element={<Programming />} />
+                <Route exact path={`/softSkills`} element={<SoftSkills />} />
+                <Route exact path={`/tools`} element={<Tools />} />
+                <Route exact path={`/languages`} element={<Languages />} />
+              </Routes>
+            </Grid>
+          </div>
         </Grid>
       </Paper>
     </Container>

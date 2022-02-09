@@ -3,7 +3,8 @@ import {Container, Grid, Stack} from '@mui/material';
 import CustomAvatar from '../../elements/avatar/Avatar';
 import Introduction from './Intoduction';
 import Background from '../../elements/background/Background';
-import Projects from '../../views/Projects/Projects'
+import Projects from '../../views/Projects/Projects';
+import Skills from '../../views/Skills/Skills';
 
 
 
@@ -29,6 +30,7 @@ const MainLayout = () => {
         </Container>
       </main>
       <Projects />
+      <Skills />
     </>
   );
 };

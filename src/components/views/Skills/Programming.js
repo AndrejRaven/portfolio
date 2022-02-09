@@ -1,46 +1,22 @@
-import {  Grid, makeStyles, Typography} from '@material-ui/core';
-import React from 'react';
 import { FaReact, FaHtml5, FaCss3Alt, FaSass } from 'react-icons/fa';
-import { SiRedux, SiJavascript, SiGithub, SiBootstrap, SiMaterialUi } from 'react-icons/si';
+import { SiRedux, SiJavascript, SiGithub, SiBootstrap } from 'react-icons/si';
 
-
-const useStyles = makeStyles((theme) => ({
-  icon: {
-    fontSize: '70px',
-    [theme.breakpoints.down('md')]: {
-      fontSize: '30px',
-    },
-  },
-}));
+import SkillIcon from '../../elements/skillIcon/SkillIcon';
 
 const Programming = () => {
 
-  const classes = useStyles();
-      
-  return(
-    
-    <Grid container
-      spacing={2}
-      justifyContent="center">
-      <Grid item xs={6} sm={4} md={3} className={classes.icon}><FaReact />
-        <Typography>React</Typography></Grid>  
-      <Grid item xs={6} sm={4} md={3} className={classes.icon}><FaHtml5 />
-        <Typography>HTML5</Typography></Grid> 
-      <Grid item xs={6} sm={4} md={3} className={classes.icon}><FaCss3Alt />
-        <Typography>CSS3</Typography></Grid> 
-      <Grid item xs={6} sm={4} md={3} className={classes.icon}><SiRedux />
-        <Typography>Redux</Typography></Grid> 
-      <Grid item xs={6} sm={4} md={3} className={classes.icon}><SiJavascript />
-        <Typography>JavaScript/ES6</Typography></Grid> 
-      <Grid item xs={6} sm={4} md={3} className={classes.icon}><SiGithub />
-        <Typography>Git</Typography></Grid> 
-      <Grid item xs={6} sm={4} md={3} className={classes.icon}><SiBootstrap />
-        <Typography>Bootstrap</Typography></Grid> 
-      <Grid item xs={6} sm={4} md={3} className={classes.icon}><FaSass />
-        <Typography>Sass</Typography></Grid>  
-      <Grid item xs={6} sm={4} md={3} className={classes.icon}><SiMaterialUi />
-        <Typography>MaterialUi</Typography></Grid>        
-    </Grid>
+  return (
+    <>
+      <SkillIcon text="React" icon={<FaReact />} />
+      <SkillIcon text="HTML5" icon={<FaHtml5 />} />
+      <SkillIcon text="CSS3" icon={<FaCss3Alt />} />
+      <SkillIcon text="Redux" icon={<SiRedux />} />
+      <SkillIcon text="JavaScript/ES6" icon={<SiJavascript />} />
+      <SkillIcon text="Git" icon={<SiGithub />} />
+      <SkillIcon text="Bootstrap" icon={<SiBootstrap />} />
+      <SkillIcon text="Sass" icon={<FaSass />} />
+      <SkillIcon text="MaterialUi" icon={<SiBootstrap />} />
+    </>
   );
 
 };

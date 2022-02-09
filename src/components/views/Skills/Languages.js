@@ -1,42 +1,37 @@
-import { Grid, makeStyles, Typography} from '@material-ui/core';
-import React from 'react';
+import { Grid, Typography, useTheme} from '@mui/material';
 import Flag from 'react-flagkit';
 
-
-const useStyles = makeStyles((theme) => ({
-  icon: {
+const iconClass = `{
     width: '140px',
     height: '100px',
     margin: '10px 30px',
-    [theme.breakpoints.down('md')]: {
-      width: '80px',
-      height: '60px',
-    },
-  },
-}));
-
+    // [theme.breakpoints.down('md')]: {
+    //   width: '80px',
+    //   height: '60px',
+    // }
+}`;
 
 const Languages = () => {
-  const classes = useStyles();
-      
+  const theme = useTheme();
+
   return(
     
     <Grid container
-      spacing={2}
+      alignItems="center"
       justifyContent="center"
-      alignItems="center">
-      <Grid item xs={12} sm={3}>
-        <Flag country="PL" className={classes.icon} />
-        <Typography>Polish</Typography></Grid>
-      <Grid item xs={12}  sm={3}>
-        <Flag country="GB" className={classes.icon} />
-        <Typography>English</Typography></Grid>     
-      <Grid item xs={12}  sm={3}>
-        <Flag country="RU" className={classes.icon} />
-        <Typography>Russian</Typography></Grid>             
-      <Grid item xs={12}  sm={3}>
-        <Flag country="UA" className={classes.icon} />
-        <Typography>Ukrainian</Typography></Grid>     
+      sx={{ backgroundColor: 'red'}}>
+      <Grid item xs={12} sm={3} sx={{ '& img': { width: '140px', height: '160px', m: '10px 30px'} }}>
+        <Flag country="PL" />
+        <Typography variant='h5'>Polish</Typography></Grid>
+      <Grid item xs={12}  sm={3} sx={{ '& img': { width: '140px', height: '160px', m: '10px 30px'} }}>
+        <Flag country="GB" />
+        <Typography variant='h5'>English</Typography></Grid>     
+      <Grid item xs={12}  sm={3} sx={{ '& img': { width: '140px', height: '160px', m: '10px 30px'} }}>
+        <Flag country="RU" />
+        <Typography variant='h5'>Russian</Typography></Grid>             
+      <Grid item xs={12}  sm={3} sx={{ '& img': { width: '140px', height: '160px', m: '10px 30px'} }}>
+        <Flag country="UA" />
+        <Typography variant='h5'>Ukrainian</Typography></Grid>     
     </Grid>
   );
 

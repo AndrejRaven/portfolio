@@ -1,13 +1,13 @@
 import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
+const muiTheme = createTheme({
   palette: {
     background: {
       default: '#D6F2FF'
     },
     text: {
       primary: '#1B365C',
-      secondary: '#1D4DFF',
+      secondary: '#3061A6',
     },
     primary: {
       light: '#73B2D9',
@@ -22,13 +22,19 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: [
-      'Bebas Neue',
       'Mukta',
+      'Bebas Neue',
       'Anton'
     ].join(','),
     fontSize: 12,
-    h6: {
-      fontFamily: 'Mukta',
+    h1: {
+      fontFamily: 'Bebas Neue',
+    },
+    h2: {
+      fontFamily: 'Bebas Neue',
+    },
+    h3: {
+      fontFamily: 'Bebas Neue',
     },
     button: {
       fontFamily: 'Anton'
@@ -36,4 +42,4 @@ const theme = createTheme({
   },
 });
 
-export default theme;
+export default muiTheme;
