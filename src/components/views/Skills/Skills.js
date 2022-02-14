@@ -1,4 +1,4 @@
-import { Container, Button, Paper, Grid, Typography } from '@mui/material';
+import { Container, Button, Paper, Grid, Typography, useTheme } from '@mui/material';
 import {
   Routes,
   Link,
@@ -10,6 +10,7 @@ import Tools from './Tools';
 import Languages from './Languages';
 
 const Skills = () => {
+  const theme = useTheme();
 
   return (
     <Container maxWidth='lg' sx={{ marginTop: '100px', marginBottom: '100px'}}>
@@ -17,12 +18,14 @@ const Skills = () => {
         <Grid container
           spacing={2}
           justifyContent="center"
+          sx={{ backgroundColor: theme.palette.background.darker}}
         >
           <Grid item xs={12}>
             <Typography
               component="h1"
               variant="h3"
               color="inherit"
+              sx={{ pt: '30px'}}
               gutterBottom
             >My technology stack</Typography>
             <Link to={`/`}><Button sx={{ margin: 1, fontSize: 16 }}>Programming</Button></Link>

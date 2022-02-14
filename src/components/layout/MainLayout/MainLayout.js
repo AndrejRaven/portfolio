@@ -5,6 +5,7 @@ import Introduction from './Intoduction';
 import Background from '../../elements/background/Background';
 import Projects from '../../views/Projects/Projects';
 import Skills from '../../views/Skills/Skills';
+import EducationJobs from '../../views/EducationJobs/EducationJobs'
 
 
 
@@ -31,6 +32,7 @@ const MainLayout = () => {
       </main>
       <Projects />
       <Skills />
+      <EducationJobs />
     </>
   );
 };
