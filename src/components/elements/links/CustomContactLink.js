@@ -34,7 +34,6 @@ const CustomContactLink = ({ component, text, type }) => {
       <Divider orientation="vertical" sx={{height: "100%", padding: 2}} />
       <Typography variant="h6" sx={{
         width: '100%',
-        marginLeft: 5
       }} >{text}</Typography>
     </Link>
   );

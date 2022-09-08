@@ -1,45 +1,27 @@
 import React from 'react';
-import { CssBaseline, AppBar, Toolbar, Typography } from "@mui/material";
-
-import CustomAvatar from '../../elements/avatar/Avatar';
+import { Button, Grid, Toolbar } from "@mui/material";
 
 
 
 const Navigation = () =>  {
 
   return (
-    <>
-      <CssBaseline />
-        <AppBar position="sticky" disablegutters='true'>
-          <Toolbar sx={{justifyContent: 'space-between'}}>
-            <Typography variant="h5">
-              Andrej Babiak 
-            </Typography>
-            <CustomAvatar badgeHeight={15} badgeWidth={15} />
-          </Toolbar>
-        </AppBar>
-    </>
+    <Toolbar>
+        <Grid container justifyContent="space-between">
+          <Grid>
+            <Button>Dark mode</Button>
+            <Button>Raven</Button>
+          </Grid>
+          <Grid>
+            <Button>Skills</Button>
+            <Button>Projects</Button>
+            <Button>Education</Button>
+            <Button>Work expirience</Button>
+            <Button>Contact</Button>
+          </Grid>
+        </Grid>
+      </Toolbar>
   );
 };
 
 export default Navigation;
-
-{/* <CssBaseline />
-<AppBar position="sticky" disablegutters='true'>
-  <Toolbar>
-    <Typography variant="h6">
-    Andrej Babiak 
-    </Typography>
-    <Badge
-      overlap="circular"
-      anchorOrigin={{
-        vertical: 'bottom',
-        horizontal: 'right',
-      }}
-      badgeContent={<SmallAvatar style={{ border: 'none' }} alt="React" src={iconReact} />}
-    >
-      <Avatar alt="Andrej Babiak" src={avatar} />
-    </Badge>
-  </Toolbar>
-</AppBar>
-</> */}

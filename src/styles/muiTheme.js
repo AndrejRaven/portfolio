@@ -3,16 +3,17 @@ import { createTheme } from '@mui/material/styles';
 const muiTheme = createTheme({
   palette: {
     background: {
-      default: '#D6F2FF',
-      darker: '#BBDEF0'
+      default: '#2b3138',
+      paper: '#23282E',
+      darker: '#23282E'
     },
     text: {
-      primary: '#1B365C',
-      secondary: '#3061A6',
+      primary: '#DBDEE2',
+      secondary: '#DBDEE2',
     },
     primary: {
       light: '#73B2D9',
-      main: '#323377',
+      main: '#DBDEE2',
       dark: '#0D2840'
     },
     secondary: {
@@ -29,10 +30,10 @@ const muiTheme = createTheme({
     ].join(','),
     fontSize: 12,
     h1: {
-      fontFamily: 'Bebas Neue',
+      fontFamily: 'Mukta',
     },
     h2: {
-      fontFamily: 'Bebas Neue',
+      fontFamily: 'Anton',
     },
     h3: {
       fontFamily: 'Bebas Neue',

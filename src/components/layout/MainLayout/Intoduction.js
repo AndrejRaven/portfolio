@@ -11,8 +11,9 @@ const Introduction = () => {
     <Grid item xs={12} sm={9} md={6}>
       <Typography
         component="h1"
-        variant="h1"
+        variant="h2"
         color="inherit"
+        textTransform='none'
       >
         Hi, I`m Andrej Babiak
       </Typography>
@@ -30,7 +31,7 @@ const Introduction = () => {
         <Button sx={{ width: '180px', fontSize: 16 }} variant="contained" color="primary" href='mailto:https://andrejbabak221@gmail.com' target="_blank">
           Get in touch
         </Button>
-        <Button sx={{ width: '180px', fontSize: 16 }} variant="contained" color="secondary" href='https://drive.google.com/file/d/12N6U9i8NQMXcEQgjAPoFA5krBTwGUSww/view?usp=sharing' target="_blank">
+        <Button sx={{ width: '180px', fontSize: 16 }} variant="contained" color="secondary" href='https://drive.google.com/drive/folders/1jxhwlhIdjhHno8veSkRNfBxEgiFFXJd-' target="_blank">
           View resume
         </Button>
       </Stack>
